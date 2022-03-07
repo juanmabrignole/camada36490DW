@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alina Muzzio- Contacto</title>
+</head>
+<body>
+    <!--FORMULARIO-->
+<section>
+
+    <form method="get" name="contacto" action="procesar.php">
+       <fieldset>
+           <legend>Formulario de contacto</legend>
+    <p><label>Nombre:<input type="text" name="nombre" placeholder="Juan" required></label></p>
+    <p><label>Apellido: <input type="text" name="apellido" placeholder="Perez" required></label></p>
+    <p><label>Email: <input type="email" name="correo" placeholder="usuario@servidor.com"></label></p>
+    <p><label> Teléfono: <input type="tel" name="telefono"></label></p>
+    <p><label>Contraseña: <input type="password" required autofocus></label></p>
+
+    <!--Radio-->
+    <h4>Sexo</h4>
+    <label for="sexo">Hombre</label>
+    <input type="radio" name="sexo" value="hombre">
+    <label for="sexo">Mujer</label>
+    <input type="radio" name="sexo" value="mujer">
+
+    <!--Checkbox-->
+    <h4>Coleccion: </h4>
+    </p>
+        <label for="coleccion">Artesana de la fotografia</label>
+        <input type="checkbox" name="coleccion" value="artesanadeltiempo">
+    <p>
+        <p><label for="coleccion">Son imagenes de energia</label>
+        <input type="checkbox" name="coleccion" value="sonimagenesdeenergia">
+    </p>   
+    <p>
+        <label for="coleccion">Catarsis</label>
+        <input type="checkbox" name="coleccion" value="catarsis">
+    </p>
+
+    <!--Menu Despegable-->
+    <h4>Tecnica Elegida: </h4>
+    <select name="tecnica" id="">
+    <option value="serigrafia">Serigrafia</option>
+    <option value="aquarela">Aquarela</option>
+    <option value="fotografia">Fotografia</option>
+    </select>
+
+    <input type="file">
+
+    <h4>Dejame tu comentario</h4>    
+    <textarea name="comenatrio" id="" cols="30" rows="10"></textarea>
+
+
+    
+    <!--Botones-->
+    <p><input type="submit" value="Enviar"></p>
+    <p><input type="reset" value="Borrar Formulario"></p>
+    <p><input type="button" value="Sin Acciones"></p>
+</fieldset>
+    </form>
+    </section>
+    
+</body>
+</html>
+
+
+
+
