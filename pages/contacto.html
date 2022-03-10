@@ -1,71 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Alina Muzzio- Contacto</title>
 </head>
 <body>
-    <!--FORMULARIO-->
-<section>
+    <header>
+        <h1>Quedemos en contacto</h1>
+    </header>
+<nav>
+    <ul>
+        <li> 
+            <!--Enlaces Relativos-->
+            <a href="../index.html">Inicio</a>
+        </li>
+        <li>
+            <a href="pages/sobremi.html">Sobre Mi</a>   
+        </li>
+        <!--Enlaces absolutos-->
+        <li>
+            <a href="https://www.malba.org.ar/" target="_blanck">Trabajos</a>
+           
+        </li>
+        <!--Enlace Interno-->
+        <li>
+            <a href="../pages/exposiciones.html">Exposiciones</a>   
+        </li>
+        <li> <a href="#">Contacto</a></li>
+    </ul>
 
-    <form method="get" name="contacto" action="procesar.php">
-       <fieldset>
-           <legend>Formulario de contacto</legend>
-    <p><label>Nombre:<input type="text" name="nombre" placeholder="Juan" required></label></p>
-    <p><label>Apellido: <input type="text" name="apellido" placeholder="Perez" required></label></p>
-    <p><label>Email: <input type="email" name="correo" placeholder="usuario@servidor.com"></label></p>
-    <p><label> Teléfono: <input type="tel" name="telefono"></label></p>
-    <p><label>Contraseña: <input type="password" required autofocus></label></p>
+</nav>
 
-    <!--Radio-->
-    <h4>Sexo</h4>
-    <label for="sexo">Hombre</label>
-    <input type="radio" name="sexo" value="hombre">
-    <label for="sexo">Mujer</label>
-    <input type="radio" name="sexo" value="mujer">
+    <form id="backForm" action="procesar.php" method="post">
 
-    <!--Checkbox-->
-    <h4>Coleccion: </h4>
-    </p>
-        <label for="coleccion">Artesana de la fotografia</label>
-        <input type="checkbox" name="coleccion" value="artesanadeltiempo">
-    <p>
-        <p><label for="coleccion">Son imagenes de energia</label>
-        <input type="checkbox" name="coleccion" value="sonimagenesdeenergia">
-    </p>   
-    <p>
+        <fieldset>
+            <legend>Formulario de Contacto</legend>
+        <p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" placeholder="ingresatunombre">
+        </p>
+
+        <p>
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" placeholder="ingresatuapellido">
+        </p>
+
+        <p>
+            <label for="pass">Contrasena: </label>
+            <input type="password" name="pass">
+        </p>
+
+        <p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="telefono">Telefono: </label>
+            <input type="tel" name="telefono">
+        </p>
+
+        <!--Checkbox-->
+        <h4>Coleccion</h4>
         <label for="coleccion">Catarsis</label>
         <input type="checkbox" name="coleccion" value="catarsis">
-    </p>
+        
+        <label for="coleccion">Oasis</label>
+        <input type="checkbox" name="coleccion" value="oasis">
 
-    <!--Menu Despegable-->
-    <h4>Tecnica Elegida: </h4>
-    <select name="tecnica" id="">
-    <option value="serigrafia">Serigrafia</option>
-    <option value="aquarela">Aquarela</option>
-    <option value="fotografia">Fotografia</option>
-    </select>
+        <label for="coleccion">Soleado</label>
+        <input type="checkbox" name="coleccion" value="soleado">
 
-    <input type="file">
+        <!--Radio-->
+        <h4>Estado Civil</h4>
+        <label for="estadocivil">Solera/o</label>
+        <input type="radio" name="estadocivil" value="soltera/o">
 
-    <h4>Dejame tu comentario</h4>    
-    <textarea name="comenatrio" id="" cols="30" rows="10"></textarea>
+        <label for="estadocivil">Casada/o</label>
+        <input type="radio" name="estadocivil" value="casada/o"><br><br>
 
+        <!--Menu Desplegable-->
+        <h4>Tecnica</h4>
+        <select name="tecnica" id="">
+            <option value="serigrafia">Serigrafia</option>
+            <option value="aquarela">Aquarela</option>
+            <option value="dibujo">Dibujo</option>
+            
+        </select>
 
-    
-    <!--Botones-->
-    <p><input type="submit" value="Enviar"></p>
-    <p><input type="reset" value="Borrar Formulario"></p>
-    <p><input type="button" value="Sin Acciones"></p>
-</fieldset>
+        <h4>Dejame tu comentario</h4>
+
+        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+
+        <!--Botones-->
+        <p><input type="submit" value="Enviar"></p>
+        <p><input type="reset" value="Borrar Formulario"></p>
+        <p><input type="button" value="Sin Acciones"></p>
+
+    </fieldset>
     </form>
-    </section>
+
+    <footer id="footer">
+        <p>Todos los derechos reservados</p>
+    </footer>
+
     
 </body>
 </html>
-
-
-
-

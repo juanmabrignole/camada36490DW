@@ -4,67 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../alina_muzzio/assets/logo/logo.png" type="image/x-icon">
+    <!--Hoja de Estilos-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--Tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <title>Alina Muzzio-Artista Plastica</title>
+
+    <style>
+        /*
+
+        body{
+            background-color: aqua;
+        }
+        h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px;
+        }
+
+        */
+    </style>
+
 </head>
 <body>
     <!--Comentario-->
-    <header>
+    <header id="backgroundHeader">
         <h1>Alina Muzzio-Artista Plastica</h1>
+        
         <nav>
-
-            <!--Lista Desordenada-->
+            <!--Listas Desordenadas-->
             <ul>
-                <!--Enlaces Relativos-->
-                <li><a href="#">Inicio</a></li>
-                <li><a href="pages/sobremi.html">Sobre mi</a></li>
-                <!--Enlaces Absolutos-->
-                <li><a href="https://rosalbabustamante.com.mx/flujo/" target="_blank">Proyectos</a></li>
-                <!--Enlaces Internos-->
-                <li> <a href="#footer">Trabajos</a></li>
-                <li>Contacto</li>
+                <li> 
+                    <!--Enlaces Relativos-->
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="pages/sobremi.html">Sobre Mi</a>   
+                </li>
+                <!--Enlaces absolutos-->
+                <li>
+                    <a href="https://www.malba.org.ar/" target="_blanck">Trabajos</a>
+                   
+                </li>
+                <!--Enlace Interno-->
+                <li>
+                    <a href="#footer">Exposiciones</a>   
+                </li>
+                <li> <a href="pages/contacto.html">Contacto</a></li>
             </ul>
-
-            <!--Lista Ordenada-->
-            <ol>
-                <li>Nace en Rosario</li>
-                <li>Estudia en Bs As</li>
-                <li>Gana la beca Kuitka</li>
-                <li>Participa de la Bienal de Venecia</li>
-                <li>Expone en el MET</li>
-            </ol>
-
-            <!--Listas de Definicion-->
-            <dl>
-                <dt>Cubismo</dt>
-                <dd>El cubismo fue un movimiento artístico desarrollado entre 1907 y 1917, creado por Pablo Picasso y Georges Braque, continuado en sus albores por Jean Metzinger, Albert Gleizes, Robert Delaunay, Juan Gris, María Blanchard y Guillaume Apollinaire.1​Es una tendencia esencial, pues da pie al resto de las vanguardias europeas del siglo XX. No se trata de un ismo más, sino que es considerado la ruptura definitiva con la pintura tradicional. </dd>
-            </dl>
-
-            
         </nav>
     </header>
+    
     <main>
         <section>
             <article>
                 <h2>Sobre mi</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolorum! Consectetur deserunt explicabo nihil temporibus provident illo dolorum quaerat dolor ipsum quis beatae voluptatibus, ducimus nesciunt, optio rem suscipit veniam?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolorum! Consectetur deserunt explicabo nihil temporibus provident illo dolorum quaerat dolor ipsum quis beatae voluptatibus, ducimus nesciunt, optio rem suscipit veniam?</p>
             </article>
         </section>
     </main>
 
-    <aside>
-        <h3>Links</h3>
-        <p id="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, sit fuga officia doloremque perferendis labore tenetur iusto voluptates, unde aspernatur incidunt adipisci accusantium atque vel aliquid totam hic eos minima?</p>
+    <aside class="bordesAside">
+        <h3>Reseñas</h3>
+        <!--Listas Anidadas-->
+        <ul>
+            <li>Argentina
+                <ul>
+                    <li>La Nacion</li>
+                    <li>Pagina 12</li>
+                    <li>Infobae</li>
+                </ul>
+            </li>
+
+            <li>Mexico
+                <ul>
+                    <li>Jornada</li>
+                    <li>El Universal</li>
+                </ul>
+            </li>
+        </ul>
+        
     </aside>
-    
-    <h1>Titulo 1</h1>
-    <h2>Titulo 2</h2>
-    <h3>Titulo 3</h3>
-    <h4>Titulo 4</h4>
-    <h5>Titulo 5</h5>
-    <h6>Titulo 6</h6>
-    
-    <footer>
+
+    <!--Listas de Definicion-->
+    <dl>
+        <dt>Impresionismo</dt>
+        <dd>
+            El impresionismo es un movimiento artístico1​ inicialmente definido para la pintura impresionista, a partir del comentario despectivo2​ de un crítico de arte (Louis Leroy) ante el cuadro Impresión, sol naciente de Claude Monet, generalizado a otros expuestos en el salón de artistas independientes de París entre el 15 de abril y el 15 de mayo de 1874 (un grupo en el que estaban Camille Pissarro, Edgar Degas, Pierre-Auguste Renoir, Paul Cézanne, Alfred Sisley, Berthe Morisot). 
+        </dd>
+    </dl>
+        
+    <footer id="footer">
         <p>Todos los derechos registrados</p>
     </footer>
 
