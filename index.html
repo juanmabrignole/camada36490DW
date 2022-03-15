@@ -5,37 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../alina_muzzio/assets/logo/logo.png" type="image/x-icon">
-    <!--Hoja de Estilos-->
-    <link rel="stylesheet" href="css/estilos.css">
     <!--Tipografia-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+    
     <title>Alina Muzzio-Artista Plastica</title>
 
+    <!--Linkeo Interno
     <style>
-        /*
-
-        body{
-            background-color: aqua;
+        p{
+            color: brown;
         }
+
         h1{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 50px;
+            color: green;
         }
-
-        */
     </style>
-
+    -->
 </head>
 <body>
     <!--Comentario-->
-    <header id="backgroundHeader">
-        <h1>Alina Muzzio-Artista Plastica</h1>
-        
-        <nav>
+    <header class="miHeader">
+        <h1 class="titleHeader">
+            Alina Muzzio-Artísta Plástica
+        </h1>
+    </header>
+    
+        <nav class="navHome">
             <!--Listas Desordenadas-->
-            <ul>
+            <ul class="listasDesordenadas">
                 <li> 
                     <!--Enlaces Relativos-->
                     <a href="#">Inicio</a>
@@ -45,28 +47,30 @@
                 </li>
                 <!--Enlaces absolutos-->
                 <li>
-                    <a href="https://www.malba.org.ar/" target="_blanck">Trabajos</a>
-                   
+                    <a href="pages/trabajos.html" target="_blanck">Trabajos</a>               
                 </li>
                 <!--Enlace Interno-->
                 <li>
-                    <a href="#footer">Exposiciones</a>   
+                    <a href="pages/exposiciones.html">Exposiciones</a>   
                 </li>
                 <li> <a href="pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+
+        <main id="principal">
     
-    <main>
         <section>
             <article>
                 <h2>Sobre mi</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, dolorum! Consectetur deserunt explicabo nihil temporibus provident illo dolorum quaerat dolor ipsum quis beatae voluptatibus, ducimus nesciunt, optio rem suscipit veniam?</p>
+                        <p>Alina Muzzio (Posadas, Misiones, 17 de noviembre de 1964) es una artista argentina que ha desarrollado la mayor parte de su producción artística en el área del arte conceptual y la fotografía.
+                        
+                        Sus obras han recibido diferentes premios, entre ellos el Premio a la Artista Argentina en la II Bienal de Arte de Buenos Aires (2002), Premio Konex en Escultura (2002) y en Video Arte (2012), Fundación Konex, y el Gran premio de honor del Salón Nacional, especialidad Artes Plásticas, entre otros.En 2013 participa con su obra "Rapsodia inconclusa" en la 55.Bienal de Venecia. 
+                    </p>
             </article>
         </section>
-    </main>
+    
 
-    <aside class="bordesAside">
+    <aside>
         <h3>Reseñas</h3>
         <!--Listas Anidadas-->
         <ul>
@@ -92,16 +96,15 @@
     <dl>
         <dt>Impresionismo</dt>
         <dd>
-            El impresionismo es un movimiento artístico1​ inicialmente definido para la pintura impresionista, a partir del comentario despectivo2​ de un crítico de arte (Louis Leroy) ante el cuadro Impresión, sol naciente de Claude Monet, generalizado a otros expuestos en el salón de artistas independientes de París entre el 15 de abril y el 15 de mayo de 1874 (un grupo en el que estaban Camille Pissarro, Edgar Degas, Pierre-Auguste Renoir, Paul Cézanne, Alfred Sisley, Berthe Morisot). 
+            El impresionismo es un movimiento artístico inicialmente definido para la pintura impresionista, a partir del comentario despectivo de un crítico de arte (Louis Leroy) ante el cuadro Impresión, sol naciente de Claude Monet, generalizado a otros expuestos en el salón de artistas independientes de París entre el 15 de abril y el 15 de mayo de 1874 (un grupo en el que estaban Camille Pissarro, Edgar Degas, Pierre-Auguste Renoir, Paul Cézanne, Alfred Sisley, Berthe Morisot). 
         </dd>
     </dl>
-        
+
+
     <footer id="footer">
         <p>Todos los derechos registrados</p>
     </footer>
-
-
-
+</main>   
     
 </body>
 </html>
