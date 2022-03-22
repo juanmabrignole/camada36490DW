@@ -220,3 +220,72 @@ a{
     font-family: 'poppins';
 }
 
+/*Implementando CSS GRIDS*/
+.grid-container{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);/*Modificar este valor para las propiedades del hijo*/
+    column-gap: 10px;
+    row-gap: 10px;
+    /*justify-items: center;
+    align-items: center;
+    justify-content: end;
+    align-content: center;
+    height: 1000px;*/
+}
+
+.grid-container div{
+    border: solid 1px black;
+    background-color: chocolate;
+}
+
+.hijo2{
+    align-self: center;
+}
+
+/*Implementando Grids Areas*/
+#grilla{
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-areas:
+          "nav header header"
+          "nav productos publicidad"
+          "nav servicios publicidad"
+          "nav footer footer";
+        grid-template-rows: 100px 1fr 1fr 75px; 
+        grid-template-columns: 20% auto 15%;
+        row-gap: 15px;
+        column-gap: 10px;
+     }
+    
+
+.border{
+    border: solid 1px black;
+    background-color: goldenrod;
+}
+
+.header{
+    grid-area: header;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+section #productos{
+    grid-area: productos;
+}
+
+section #servicios{
+    grid-area: servicios;
+}
+
+.navegacion{
+    grid-area: nav;
+}
+
+aside{
+    grid-area: publicidad;
+}
+
