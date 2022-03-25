@@ -252,3 +252,198 @@ a{
     grid-area: main;
 }
 
+/*ESTILOS VISTOS EN LA CLASE GRIDSII*/
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins';
+}
+
+/*header*/
+
+.navbar{
+    padding: 10px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    align-items: center;
+}
+
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+    grid-column: 2/3;
+}
+
+.navbar .menu{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 4/7;
+}
+
+.navbar .menu li{
+    list-style: none;
+}
+
+.navbar .menu a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar .menu-bar{
+    display: none;
+}
+
+.navbar .shop{
+    grid-column: 8/9;
+}
+
+/*Main*/
+
+.principal{
+    height: 80vh;
+    background-image: url('../assets/img/foto-alina.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8,1fr);
+}
+
+.principal .contenido{
+    grid-column:7/10;
+    grid-row: 3/6;
+    color: #fff;
+}
+
+.principal h3{
+    font-size: 25px;
+    font-weight:300;
+}
+
+.principal h1{
+    font-size: 35px;
+    color: yellow;
+    text-transform: uppercase;
+}
+
+.principal p{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.principal .boton{
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 600;
+    background: none;
+    color: yellow;
+    padding: 10px 20px;
+    border: solid 2px white;
+    border-radius: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/*footer*/
+.pieDepagina{
+    display: grid;
+    height: 88px;
+    align-items: center;
+    background-color: #808080;
+    color: yellow;
+    grid-template-areas: "desarrollado seguime redes-sociales";
+}
+
+.pieDepagina .desarrollado{
+    grid-area: desarrollado;
+    display: flex;
+    justify-content: center;
+}
+
+.pieDepagina .seguime{
+    grid-area: seguime;
+    display: flex;
+    justify-content: center;
+}
+
+.pieDepagina .redes-sociales{
+    grid-area: redes-sociales;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+/*Mediaqueries*/
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        position: relative;
+    }
+
+    .navbar .shop{
+        display: none;
+    }
+
+    .navbar .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .navbar .menu{
+        display: none;
+    }
+
+    /*main*/
+    .principal .contenido{
+        grid-column: 8/11;
+        grid-row: 3/7;
+        margin-right: 10px;
+    }
+
+    .principal h1{
+        font-size: 25px;
+    }
+
+    .principal p{
+        font-size: 14px;
+    }
+
+    .principal .boton{
+        font-size: 10px;
+        font-weight: 900;
+        color: yellow;
+        text-transform: uppercase;
+        background: black;
+        border: solid 1px yellow;
+    }
+
+    /*footer*/
+
+    .pieDepagina{
+        height: 110px;
+    }
+
+    .pieDepagina .seguime{
+        display: none;
+    }
+
+    .pieDepagina .desarrollado{
+        font-size: 15px;
+    }
+   
+}
+
