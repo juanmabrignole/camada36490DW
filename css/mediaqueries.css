@@ -1,0 +1,59 @@
+@media screen and (max-width: 600px) {
+    .navbar{
+        position: relative;
+    }
+
+    .navbar .shop{
+        display: none;
+    }
+
+    .navbar .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .navbar .menu{
+        display: none;
+    }
+
+    /*main*/
+    .principal .contenido{
+        grid-row: 3/7;
+    }
+
+    .principal h1{
+        font-size: 25px;
+    }
+
+    .principal p{
+        font-size: 12px;
+    }
+
+    .principal .boton{
+        font-size: 10px;
+        font-weight: 900;
+        color: yellow;
+        text-transform: uppercase;
+        background: black;
+        border: solid 1px yellow;
+    }
+
+    /*footer*/
+
+    .pieDepagina{
+        height: 110px;
+    }
+
+    .pieDepagina .seguime{
+        display: none;
+    }
+
+    .pieDepagina .desarrollado{
+        font-size: 15px;
+    }
+
+
+    
+}
