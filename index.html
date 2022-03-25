@@ -1,110 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../alina_muzzio/assets/logo/logo.png" type="image/x-icon">
-    <!--Tipografia-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-    <!--Hoja de Estilos CSS-->
+    <!--Hoja de Estilos-->
     <link rel="stylesheet" href="css/estilos.css">
-    
-    <title>Alina Muzzio-Artista Plastica</title>
-
-    <!--Linkeo Interno
-    <style>
-        p{
-            color: brown;
-        }
-
-        h1{
-            font-size: 50px;
-            color: green;
-        }
-    </style>
-    -->
+    <!--Favicon-->
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
+    <title>Alina-Muzzio-Sobre Mi</title>
 </head>
 <body>
-    <!--Comentario-->
-    <header class="miHeader">
-        <h1 class="titleHeader">
-            Alina Muzzio-Artísta Plástica
-        </h1>
-    </header>
-   
-        <nav class="navHome">
-            <!--Listas Desordenadas-->
-            <ul class="listasDesordenadas">
-                <li> 
-                    <!--Enlaces Relativos-->
-                    <a href="#">Inicio</a>
-                </li>
-                <li>
-                    <a href="pages/sobremi.html">Sobre Mi</a>   
-                </li>
-                <!--Enlaces absolutos-->
-                <li>
-                    <a href="pages/trabajos.html" target="_blanck">Trabajos</a>               
-                </li>
-                <!--Enlace Interno-->
-                <li>
-                    <a href="pages/exposiciones.html">Exposiciones</a>   
-                </li>
-                <li> <a href="pages/contacto.html">Contacto</a></li>
+
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="assets/logo/logo.png" alt="logo-alina-muzzio">
+            <ul class="menu" >
+                <li><a href="#">Inicio</a></li>
+                <li><a href="pages/sobremi.html">Sobre Mi</a></li> 
+                <li><a href="pages/trabajos.html">Trabajos</a></li> 
+                <li><a href="pages/exposiciones.html">Exposiciones</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>     
             </ul>
+
+            <div class="menu-bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <div class="shop">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
         </nav>
+    </header>
 
-        <main id="principal">
-    
-        <section>
-            <article>
-                <h2>Sobre mi</h2>
-                        <p>Alina Muzzio (Posadas, Misiones, 17 de noviembre de 1964) es una artista argentina que ha desarrollado la mayor parte de su producción artística en el área del arte conceptual y la fotografía.
-                        
-                        Sus obras han recibido diferentes premios, entre ellos el Premio a la Artista Argentina en la II Bienal de Arte de Buenos Aires (2002), Premio Konex en Escultura (2002) y en Video Arte (2012), Fundación Konex, y el Gran premio de honor del Salón Nacional, especialidad Artes Plásticas, entre otros.En 2013 participa con su obra "Rapsodia inconclusa" en la 55.Bienal de Venecia. 
-                    </p>
-            </article>
-        </section>
-    
+    <main class="principal">
+        <div class="contenido">
+            <h3>Artísta Plástica</h3>
+            <h1>Alina Muzzio</h1>
+            <p>Alina Muzzio (Posadas, Misiones, 17 de noviembre de 1964) es una artista argentina que ha desarrollado la mayor parte de su producción artística en el área del arte conceptual y la fotografía.</p>
 
-    <aside>
-        <h3>Reseñas</h3>
-        <!--Listas Anidadas-->
-        <ul>
-            <li>Argentina
-                <ul>
-                    <li>La Nacion</li>
-                    <li>Pagina 12</li>
-                    <li>Infobae</li>
-                </ul>
-            </li>
+            <button class="boton">Saber Más</button>
+        </div>
+    </main>
 
-            <li>Mexico
-                <ul>
-                    <li>Jornada</li>
-                    <li>El Universal</li>
-                </ul>
-            </li>
-        </ul>
-        
-    </aside>
+    <footer class="pieDepagina">
+        <div class="desarrollado" >
+            <h4>Desarrollado con la camada 36490</h4>
+        </div>
 
-    <!--Listas de Definicion-->
-    <dl>
-        <dt>Impresionismo</dt>
-        <dd>
-            El impresionismo es un movimiento artístico inicialmente definido para la pintura impresionista, a partir del comentario despectivo de un crítico de arte (Louis Leroy) ante el cuadro Impresión, sol naciente de Claude Monet, generalizado a otros expuestos en el salón de artistas independientes de París entre el 15 de abril y el 15 de mayo de 1874 (un grupo en el que estaban Camille Pissarro, Edgar Degas, Pierre-Auguste Renoir, Paul Cézanne, Alfred Sisley, Berthe Morisot). 
-        </dd>
-    </dl>
+        <div class="seguime">
+            <h4>Seguime en mis redes sociales</h4>
+        </div>
 
+        <div class="redes-sociales">
+            <i class="fa-brands fa-behance"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
 
-    <footer id="footer">
-        <p>Todos los derechos registrados</p>
     </footer>
-</main>   
-    
+  
 </body>
 </html>
