@@ -272,16 +272,46 @@ body{
 
 .navbar{
     padding: 10px;
-    background-color: gray;
+    /*background-color: gray;*/
     display: grid;
     grid-template-columns: repeat(8,1fr);
     align-items: center;
+    /*Gradientes*/
+    background-image: linear-gradient(red, yellow);
 }
 
 .navbar .logo{
     width: 60px;
     height: 60px;
     grid-column: 2/3;
+    /*Transition*/
+    transition: all 2s;
+    /*Transform*/
+    /*Translate
+    /*transform: translate(50px, 100px); /*50px en X y 100px en Y
+    /*transform: rotateX(200deg);
+    /*transform: scale(2,2);
+    /*transform: rotate(-50deg) translateY(100px);*/
+    animation-name: rotar;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+@keyframes rotar {
+    0%{
+        transform: rotateX(50deg);
+    }
+
+    50%{
+        transform: rotateX(200deg);
+    }
+
+    100%{
+        transform: rotateX(180deg);
+    }
+    
 }
 
 .navbar .menu{
@@ -332,6 +362,12 @@ body{
     font-weight:300;
 }
 
+/*Animate.css*/
+.artista-plastica{
+    animation-name: backInDown;
+    animation-duration: 3s;
+}
+
 .principal h1{
     font-size: 35px;
     color: yellow;
@@ -347,13 +383,24 @@ body{
     font-family: 'poppins';
     font-size: 16px;
     font-weight: 600;
-    background: none;
+    background-color: transparent;
     color: yellow;
     padding: 10px 20px;
     border: solid 2px white;
     border-radius: 15px;
     margin-top: 15px;
     cursor: pointer;
+    /*Transiciones*/
+    transition-property: background-color, width, color;
+    transition-duration: 10s;
+    transition-timing-function: ease-out;
+}
+
+.principal .boton:hover{
+    background-color: white;
+    width: 140px;
+    color: black;
+    border: solid 2px black;
 }
 
 /*footer*/
@@ -386,7 +433,6 @@ body{
 }
 
 /*Mediaqueries*/
-
 @media screen and (max-width: 600px) {
     .navbar{
         position: relative;
@@ -418,6 +464,11 @@ body{
         font-size: 25px;
     }
 
+    .artista-plastica{
+        animation-name: bounce;
+        animation-duration: 2s;
+    }
+
     .principal p{
         font-size: 14px;
     }
@@ -443,7 +494,53 @@ body{
 
     .pieDepagina .desarrollado{
         font-size: 15px;
-    }
-   
+    }  
 }
+
+@media (min-width: 601px) and (max-width: 900px){
+
+    .navbar{
+        position: relative;
+    }
+
+    .navbar .shop{
+        display: none;
+    }
+
+    .navbar .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .navbar .menu{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 901px) and (max-width: 1014px){
+
+    .navbar{
+        position: relative;
+    }
+
+    .navbar .shop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .menu{
+        grid-column: 4/8;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+
+
 
