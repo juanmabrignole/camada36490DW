@@ -277,42 +277,40 @@ body{
     grid-template-columns: repeat(8,1fr);
     align-items: center;
     /*Gradientes*/
-    background-image: linear-gradient(red, yellow);
+    /*background-image: radial-gradient(red, yellow);*/
+    background-image: linear-gradient(to left, red, yellow);
 }
 
 .navbar .logo{
     width: 60px;
     height: 60px;
     grid-column: 2/3;
-    /*Transition*/
-    transition: all 2s;
-    /*Transform*/
-    /*Translate
-    /*transform: translate(50px, 100px); /*50px en X y 100px en Y
-    /*transform: rotateX(200deg);
-    /*transform: scale(2,2);
-    /*transform: rotate(-50deg) translateY(100px);*/
-    animation-name: rotar;
+    /*transform: translate(200px,300px);*/
+    /*transform: rotate(180deg);*/
+    /*transform: scale(1,1);*/
+    /*transform: skew(10deg, 30deg);*/
+    animation-name: rotar_logo;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 3s;
     animation-delay: 3s;
 }
 
-@keyframes rotar {
+@keyframes rotar_logo {
     0%{
-        transform: rotateX(50deg);
+        transform: rotateX(0deg);
     }
 
     50%{
-        transform: rotateX(200deg);
+        transform: rotateX(180deg);
     }
 
     100%{
-        transform: rotateX(180deg);
+        transform: rotateX(360);
     }
     
 }
+
 
 .navbar .menu{
     display: flex;
@@ -364,8 +362,8 @@ body{
 
 /*Animate.css*/
 .artista-plastica{
-    animation-name: backInDown;
-    animation-duration: 3s;
+    animation-name: shakeX;
+    animation-duration: 5s;
 }
 
 .principal h1{
@@ -380,43 +378,45 @@ body{
 }
 
 .principal .boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'poppins';
     font-size: 16px;
-    font-weight: 600;
-    background-color: transparent;
-    color: yellow;
-    padding: 10px 20px;
-    border: solid 2px white;
-    border-radius: 15px;
+    font-weight: 700;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 30px;
     margin-top: 15px;
     cursor: pointer;
     /*Transiciones*/
-    transition-property: background-color, width, color;
-    transition-duration: 10s;
-    transition-timing-function: ease-out;
+    transition: all 3s;
 }
 
 .principal .boton:hover{
-    background-color: white;
-    width: 140px;
+    transform: translate(-10px);
     color: black;
-    border: solid 2px black;
 }
+
 
 /*footer*/
 .pieDepagina{
     display: grid;
-    height: 88px;
+    height: 80px;
     align-items: center;
-    background-color: #808080;
+    /*background-color: #808080;*/
     color: yellow;
     grid-template-areas: "desarrollado seguime redes-sociales";
+    background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
 }
 
 .pieDepagina .desarrollado{
     grid-area: desarrollado;
     display: flex;
     justify-content: center;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 .pieDepagina .seguime{
@@ -431,6 +431,7 @@ body{
     justify-content: space-evenly;
     font-size: 20px;
 }
+
 
 /*Mediaqueries*/
 @media screen and (max-width: 600px) {
@@ -497,8 +498,7 @@ body{
     }  
 }
 
-@media (min-width: 601px) and (max-width: 900px){
-
+@media (min-width:601px) and (max-width:900px){
     .navbar{
         position: relative;
     }
@@ -517,11 +517,10 @@ body{
     .navbar .menu{
         display: none;
     }
-    
+
 }
 
-@media (min-width: 901px) and (max-width: 1014px){
-
+@media (min-width:901px) and (max-width:1024px){
     .navbar{
         position: relative;
     }
@@ -537,9 +536,16 @@ body{
         font-size: 16px;
         display: flex;
         justify-content: space-around;
+
     }
+
     
 }
+
+
+
+
+
 
 
 
