@@ -58,19 +58,19 @@ a{
     color: black;
 }
 
-.navHome ul{
+.navbar-home ul{
     
     font-size: 20px;
     display: flex;
     justify-content: center;
 }
 
-.navHome ul li a{
+.navbar-home ul li a{
     margin: 4px;
     color: black;
 }
 
-.navHome ul li a:hover{
+.navbar-home ul li a:hover{
     text-decoration: underline;
 }
 
@@ -193,7 +193,7 @@ a{
 }
 */
 
-.container{
+.flex-container{
     margin-top: 30px;
     background-color: rgb(204, 197, 197);
     width: 100%;
@@ -270,7 +270,7 @@ body{
 
 /*header*/
 
-.navbar{
+.navbar-home{
     padding: 10px;
     /*background-color: gray;*/
     display: grid;
@@ -281,7 +281,7 @@ body{
     background-image: linear-gradient(to left, red, yellow);
 }
 
-.navbar .logo{
+.navbar-home .logo{
     width: 60px;
     height: 60px;
     grid-column: 2/3;
@@ -312,27 +312,27 @@ body{
 }
 
 
-.navbar .menu{
+.navbar-home .menu{
     display: flex;
     justify-content: space-around;
     grid-column: 4/7;
 }
 
-.navbar .menu li{
+.navbar-home .menu li{
     list-style: none;
 }
 
-.navbar .menu a{
+.navbar-home .menu a{
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
 
-.navbar .menu-bar{
+.navbar-home .menu-bar{
     display: none;
 }
 
-.navbar .shop{
+.navbar-home .shop{
     grid-column: 8/9;
 }
 
@@ -432,25 +432,28 @@ body{
     font-size: 20px;
 }
 
+.carousel-item{
+    max-height: 650px;
+}
 
 /*Mediaqueries*/
 @media screen and (max-width: 600px) {
-    .navbar{
+    .navbar-home{
         position: relative;
     }
 
-    .navbar .shop{
+    .navbar-home .shop{
         display: none;
     }
 
-    .navbar .menu-bar{
+    .navbar-home .menu-bar{
         display: block;
         grid-column: 8/9;
         font-size: 30px;
         cursor: pointer;
     }
 
-    .navbar .menu{
+    .navbar-home .menu{
         display: none;
     }
 
@@ -499,39 +502,39 @@ body{
 }
 
 @media (min-width:601px) and (max-width:900px){
-    .navbar{
+    .navbar-home{
         position: relative;
     }
 
-    .navbar .shop{
+    .navbar-home .shop{
         display: none;
     }
 
-    .navbar .menu-bar{
+    .navbar-home .menu-bar{
         display: block;
         grid-column: 8/9;
         font-size: 30px;
         cursor: pointer;
     }
 
-    .navbar .menu{
+    .navbar-home .menu{
         display: none;
     }
 
 }
 
 @media (min-width:901px) and (max-width:1024px){
-    .navbar{
+    .navbar-home{
         position: relative;
     }
 
-    .navbar .shop{
+    .navbar-home .shop{
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .navbar .menu{
+    .navbar-home .menu{
         grid-column: 4/8;
         font-size: 16px;
         display: flex;

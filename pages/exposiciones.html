@@ -5,45 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <!--Hojas de Estilos Css-->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Alina Muzzio- Exposiciones</title>
 </head>
 <body>
     <header>
-        <h1>Exposiciones</h1>
+        <h1 class="display-5 text-center">Alina Muzzio-Exposiciones</h1>
     </header>
-<nav>
-    <ul>
-        <li> 
-            <!--Enlaces Relativos-->
-            <a href="../index.html">Inicio</a>
-        </li>
-        <li>
-            <a href="pages/sobremi.html">Sobre Mi</a>   
-        </li>
-        <!--Enlaces absolutos-->
-        <li>
-            <a href="https://www.malba.org.ar/" target="_blanck">Trabajos</a>
-           
-        </li>
-        <!--Enlace Interno-->
-        <li>
-            <a href="#">Exposiciones</a>   
-        </li>
-        <li> <a href="../pages/contacto.html">Contacto</a></li>
-    </ul>
 
-</nav>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+              <img src="../assets/logo/logo.png" alt="logo" width="70px" height="70px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/sobremi.html">Sobre mi</a>
+              </li>
 
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/trabajos.html">Trabajos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/exposiciones.html">Exposiciones</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+              </li> 
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--Slider-->
+    <div class="container my-3">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/img/atelier/barbara-froes-Yhsdub0hV1A-unsplash.jpg" class="d-block w-100" alt="atelier01">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/atelier/jonathan-borba-RTHwerpZU_U-unsplash.jpg" class="d-block w-100" alt="atelier02">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/img/atelier/jonathan-borba-YSMqXgvSzYA-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Fin Slider-->
+
+    
+    <!--
     <div id="grilla">
         <div class="nav">Navegacion</div>
         <div class="header-1">Header</div>
         <div class="aside-1">Aside</div>
         <div class="main-1">Main</div>
     </div>
+    -->
 
-
-     <!--Tablas-->
+     <!--Tablas
      <section>
         <table cellspacing="4" cellpadding="4" border="1">
             <tr>
@@ -73,10 +119,12 @@
         </table>
 
     </section>
+    -->
 
     <footer id="footer">
         <p>Todos los derechos reservados</p>
     </footer> 
 
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
