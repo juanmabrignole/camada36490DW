@@ -436,6 +436,10 @@ body{
     max-height: 650px;
 }
 
+.item{
+    height: 150px;
+}
+
 /*Mediaqueries*/
 @media screen and (max-width: 600px) {
     .navbar-home{
