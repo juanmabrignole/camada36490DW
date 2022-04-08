@@ -5,88 +5,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/estilos.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Alina Muzzio- Contacto</title>
-
 </head>
 <body>
-    <header>
-        <h1>Quedemos en contacto</h1>
-    </header>
-<nav>
-    <ul>
-        <li> 
-            <!--Enlaces Relativos-->
-            <a href="../index.html">Inicio</a>
-        </li>
-        <li>
-            <a href="pages/sobremi.html">Sobre Mi</a>   
-        </li>
-        <!--Enlaces absolutos-->
-        <li>
-            <a href="https://www.malba.org.ar/" target="_blanck">Trabajos</a>
-           
-        </li>
-        <!--Enlace Interno-->
-        <li>
-            <a href="../pages/exposiciones.html">Exposiciones</a>   
-        </li>
-        <li> <a href="#">Contacto</a></li>
-    </ul>
 
-</nav>
+    <div class="container my-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">
+                  <img src="../assets/logo/logo.png" alt="logo" width="70px" height="70px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/sobremi.html">Sobre mi</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/trabajos.html">Trabajos</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/exposiciones.html">Exposiciones</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/contacto.html">Contacto</a>
+                  </li> 
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
 
+<!--Formulario con Boostrap-->
+<div class="container">
     <form id="backForm" action="procesar.php" method="post">
-
         <fieldset>
             <legend>Formulario de Contacto</legend>
-        <p>
+        <div class="form-group">
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" placeholder="ingresatunombre">
-        </p>
+        <input type="text" name="nombre" placeholder="ingresatunombre" class="form-control">
+        </div>
 
-        <p>
+        <div class="form-group">
         <label for="apellido">Apellido: </label>
-        <input type="text" name="apellido" placeholder="ingresatuapellido">
-        </p>
+        <input type="text" name="apellido" placeholder="ingresatuapellido" class="form-control">
+        </div>
 
-        <p>
+        <div class="form-group">
             <label for="pass">Contrasena: </label>
-            <input type="password" name="pass">
-        </p>
+            <input type="password" name="pass" class="form-control">
+        </div>
 
-        <p>
+        <div class="form-group">
             <label for="email">Email: </label>
-            <input type="email" name="email" required>
-        </p>
+            <input type="email" name="email" required class="form-control">
+        </div>
 
-        <p>
+        <div class="form-group">
             <label for="telefono">Telefono: </label>
-            <input type="tel" name="telefono">
-        </p>
+            <input type="tel" name="telefono" class="form-control">
+        </div>
 
         <!--Checkbox-->
         <h4>Coleccion</h4>
-        <label for="coleccion">Catarsis</label>
-        <input type="checkbox" name="coleccion" value="catarsis">
-        
-        <label for="coleccion">Oasis</label>
-        <input type="checkbox" name="coleccion" value="oasis">
 
-        <label for="coleccion">Soleado</label>
-        <input type="checkbox" name="coleccion" value="soleado">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="oasis" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Oasis
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="catarsis" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Catarsis
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="soleado" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Soleado
+            </label>
+          </div>
 
         <!--Radio-->
         <h4>Estado Civil</h4>
-        <label for="estadocivil">Solera/o</label>
-        <input type="radio" name="estadocivil" value="soltera/o">
-
-        <label for="estadocivil">Casada/o</label>
-        <input type="radio" name="estadocivil" value="casada/o"><br><br>
+        <div class="form-check" my-2>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Casado/a
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Soltero/a
+            </label>
+          </div>
 
         <!--Menu Desplegable-->
         <h4>Tecnica</h4>
-        <select name="tecnica" id="">
+        <select class="form-control" name="tecnica" id="">
             <option value="serigrafia">Serigrafia</option>
             <option value="aquarela">Aquarela</option>
             <option value="dibujo">Dibujo</option>
@@ -95,20 +127,24 @@
 
         <h4>Dejame tu comentario</h4>
 
-        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+        <textarea class="form-control" name="comentario" id="" cols="30" rows="10"></textarea>
 
         <!--Botones-->
-        <p><input type="submit" value="Enviar"></p>
-        <p><input type="reset" value="Borrar Formulario"></p>
-        <p><input type="button" value="Sin Acciones"></p>
+        <div>
+        <input class="btn btn-outline-primary my-2" type="submit" value="Enviar">
+        </div>
+        <div>
+        <input class="btn btn-outline-danger my-2" type="reset" value="Borrar Formulario">
+        </div>
 
     </fieldset>
     </form>
-
+</div>
+    
     <footer id="footer">
         <p>Todos los derechos reservados</p>
     </footer>
 
-    
+ <script src="../libs/bootstrap/js/bootstrap.min.js"></script> 
 </body>
 </html>
