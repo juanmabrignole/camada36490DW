@@ -440,6 +440,12 @@ body{
     height: 150px;
 }
 
+.imagenForm{
+    background-image: url('../assets/img/alina-muzzio-wb.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
 /*Mediaqueries*/
 @media screen and (max-width: 600px) {
     .navbar-home{
@@ -505,6 +511,82 @@ body{
     }  
 }
 
+/*Pseudoclases*/
+
+.enlace:active{
+    background: #000;
+}
+
+.enlace:link{
+    color: red;
+}
+
+.enlace:visited{
+    color: green;
+}
+
+.enlace:hover{
+    color: gray;
+}
+
+.parrafos{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+}
+
+.parrafos p:first-child{
+    background-color: red;
+}
+
+.parrafos p:last-child{
+    background-color: green;
+}
+
+.elementos{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+}
+
+.elementos p:last-of-type{
+    background-color: blue;
+}
+
+.listas{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+}
+
+.listas :nth-child(even){
+    color: white;
+    background-color: blue;
+    list-style-type: none;
+}
+
+
+.listas :nth-last-child(5){
+    color: white;
+    background-color: red;
+    list-style-type: none;
+}
+
+.formulario .nombre:focus{
+    border: solid 2px red;
+}
+
+.formulario .email:invalid{
+    background-color: gray;
+}
+
+
+
+
+
 @media (min-width:601px) and (max-width:900px){
     .navbar-home{
         position: relative;
@@ -548,6 +630,7 @@ body{
 
     
 }
+
 
 
 

@@ -13,6 +13,7 @@
 </head>
 <body>
 
+<!--Barra de navegacion con Bootstrap-->
     <div class="container my-3">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -49,19 +50,101 @@
           </nav>
         </div>
 
-<!--Formulario con Boostrap-->
+
+<!--Formulario Bootstrap 5 Responsive
+<div class="container w-75 bg-light mt-5 mb-5">
+<div class="row align-items-stretch">
+  <div class="col imagenForm d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+
+  </div>
+  <div class="col bg-white p-5">
+    <div class="text-end">
+      <img src="../assets/logo/logo.png" width="50px" alt="logoalinaformulario">
+    </div>
+    <h2 class="fw-bold text-center py-5">Decime Hola!</h2>
+    -->
+    <!--Formulario
+    <form action="#">
+      <div class=" formulario mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" name="nombre" class="nombre form-control">
+      </div>
+      <div class=" formulario mb-3">
+          <label for="apellido" class="form-label">Apellido:</label>
+          <input type="text" name="apellido" class="apellido form-control" disabled>
+      </div>
+      <div class="formulario mb-3">
+        <label for="mail" class="form-label">Correo Electronico:</label>
+        <input type="email" name="mail" class="mail form-control">
+      </div>
+      <div class="mb-3">
+        <h5>Dejame un comentario:</h5>
+        <textarea class="form-control" name="" id="" cols="10" rows="8"></textarea>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+    -->
+
+    <!--Redes Sociales
+    <div class="container w-100 my-5">
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-outline-primary w-100 my-1">
+            <div class="row align-items-center ">
+              <div class="col-2 d-none d-md-block">
+                <img src="../assets/redessociales/instagram.png" alt="instagram" width="30">
+              </div>
+              <div class="col-12 col-md-10 text-center">
+                Instagram
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn btn-outline-danger w-100 my-1">
+            <div class="row align-items-center ">
+              <div class="col-2 d-none d-md-block">
+                <img src="../assets/redessociales/behance.png" alt="behance" width="30">
+              </div>
+              <div class="col-12 col-md-10 text-center">
+                Behance
+              </div>
+            </div>
+          </button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+</div>
+-->
+
+
+<!--Formulario con Bootstraop-->
+
 <div class="container">
     <form id="backForm" action="procesar.php" method="post">
         <fieldset>
             <legend>Formulario de Contacto</legend>
-        <div class="form-group">
+        
+        <div class="formulario form-group">
         <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" placeholder="ingresatunombre" class="form-control">
+        <input type="text" name="nombre" placeholder="ingresatunombre" class="nombre form-control">
         </div>
 
-        <div class="form-group">
+        <div class="formulario form-group">
         <label for="apellido">Apellido: </label>
-        <input type="text" name="apellido" placeholder="ingresatuapellido" class="form-control">
+        <input type="text" name="apellido" placeholder="ingresatuapellido" class="apellido form-control">
         </div>
 
         <div class="form-group">
@@ -69,9 +152,9 @@
             <input type="password" name="pass" class="form-control">
         </div>
 
-        <div class="form-group">
+        <div class=" formulario form-group">
             <label for="email">Email: </label>
-            <input type="email" name="email" required class="form-control">
+            <input type="email" name="email"  required class=" email form-control">
         </div>
 
         <div class="form-group">
@@ -100,6 +183,7 @@
                 Soleado
             </label>
           </div>
+          
 
         <!--Radio-->
         <h4>Estado Civil</h4>
@@ -115,6 +199,7 @@
               Soltero/a
             </label>
           </div>
+          
 
         <!--Menu Desplegable-->
         <h4>Tecnica</h4>
@@ -125,21 +210,25 @@
             
         </select>
 
+        <!--Textarea-->
         <h4>Dejame tu comentario</h4>
-
         <textarea class="form-control" name="comentario" id="" cols="30" rows="10"></textarea>
 
-        <!--Botones-->
+
+        <!--Botones -->
         <div>
         <input class="btn btn-outline-primary my-2" type="submit" value="Enviar">
         </div>
         <div>
         <input class="btn btn-outline-danger my-2" type="reset" value="Borrar Formulario">
         </div>
-
-    </fieldset>
+        
+      </fieldset>
     </form>
+ 
 </div>
+
+
     
     <footer id="footer">
         <p>Todos los derechos reservados</p>
