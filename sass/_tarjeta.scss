@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+//Declaracion de variables
+$color-titulo-card: #f10086;
+$espacio-card: 10px auto;
+$tipografia-card: 'Poppins', sans-serif;
+$color-botones: red;
+
+/*Metodologia BEM*/
+.contenedor{
+    max-width: 1000px;
+    width: 90%;
+    margin: 15px auto;
+  }
+  
+  /*Bloque 1*/
+  
+  .tarjeta{
+    background-color: gray;
+    padding: 20px;
+  }
+  
+  .tarjeta__miniatura{
+    width: 650px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  
+  .tarjeta__imagen{
+    width: 50%;
+    border-radius: 20px;
+  }
+  
+  .tarjeta__titulo{
+    font-family: $tipografia-card;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: $color-titulo-card;
+  }
+  
+  .tarjeta__enlace{
+    color: $color-titulo-card;
+    padding: $espacio-card;
+    font-family: $tipografia-card;
+    
+  }
+  
+  .tarjeta__parrafo{
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  
+  /*Bloque 2*/
+  .boton{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    &:hover{
+        background-color: $color-botones;
+    }
+  }
+  
+  .boton__texto{
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  /*Modificador BEM*/
+  
+  .boton--alternativo{
+    font-size: 50px;
+    font-weight: bold;
+  }

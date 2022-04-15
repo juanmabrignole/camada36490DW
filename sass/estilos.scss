@@ -1,0 +1,621 @@
+//Import
+@import "colores";
+@import "tarjeta";
+
+//Declaracion de Variables Globales
+$tipografia-base: arial, sans-serif;
+$size-fuentes: 25px;
+
+//Anidacion o nesting
+/*
+nav {
+    background-color: $color-fondo;
+    
+    ul{
+        margin: 10px;
+        padding: 0px;
+        list-style-type: none;
+        //variable Local
+        $color-ul: gray;
+        color: $color-ul;
+        
+    }
+
+    li{
+        font-family: $tipografia-base;
+        display: inline-block;
+        font-size: $size-fuentes;
+    }
+    a{
+        display: block;
+        padding: 10px 12px;
+        text-decoration: none;
+        &:hover{
+            background-color: $color-fuentes;
+        }
+        &:active{
+            font-size: 25px;
+            color: blue;
+        }
+    }
+} 
+*/
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf');
+  }
+  
+  /*
+  body{
+    background-image: url('../assets/background/globos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  */
+  
+  
+  /*
+  body{
+    background-color: aqua;
+  }
+  */
+  
+  html{
+    font-family: 'poppins';
+  }
+  
+  .bordesRedondeados{
+    border: solid 5px black;
+    border-radius: 20px;
+  }
+  
+  #encabezados{
+    font-family: 'poppins';
+    font-size: 50px;
+    font-weight:lighter;
+    text-align:center;
+    color:red;
+  }
+  
+  
+  p{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .listasDesordenadas{
+    list-style-type: none;
+  }
+  
+  .titleHeader{
+    text-align: center;
+    font-size: 40px;
+    background-image: url('../assets/background/backgroundPaper.jpg');
+    background-position: center;
+    margin: 0px;
+    color: black;
+  }
+  
+  .navbar-home ul{
+    
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-home ul li a{
+    margin: 4px;
+    color: black;
+  }
+  
+  .navbar-home ul li a:hover{
+    text-decoration: underline;
+  }
+  
+  #principal{
+    padding: 15px;
+    background-image: url('../assets/background/backgroundColor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+  
+  .padre{
+    position: relative;
+    top: 40px;
+    left: 200px;
+    border: dotted 5px black;
+    padding: 5px;
+    font-size: 20px;
+    width: 200px;
+    height: 150px;
+    
+  }
+  
+  .hijo{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .encabezadoAlina{
+    display: inline-block;
+  }
+  
+  /*Contenedor padre
+  .flex-container{
+    width: 1000px;
+    height: 700px;
+    background-color: aqua;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+  }*/
+  
+  /*Hijos del flex container
+  .flex-item{
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    color: white;
+  }
+  
+  .flex-item:nth-child(odd){
+    background-color: forestgreen;
+  }
+  */
+  
+  .flex-container{
+    margin-top: 30px;
+    background-color: rgb(204, 197, 197);
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;/*alinea en el eje principal*/
+    align-items: flex-start;/*alinea en el eje secundario*/
+    flex-wrap: wrap;
+  }
+  
+  .caja img{
+    width: 350px;
+  }
+  
+  .caja{
+    margin: 15px;
+  }
+  
+  .caja p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'poppins';
+  }
+  
+  #grilla{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 20% auto 15%;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas:    "nav    header     header"
+                            "nav    main       aside"
+                            "nav    main       aside"
+                            ;
+  }
+  
+  .nav{
+    background-color: brown;
+    grid-area: nav;
+  }
+  
+  .header-1{
+    background-color: greenyellow;
+    grid-area: header;
+  }
+  
+  .aside-1{
+    background-color: coral;
+    grid-area: aside;
+  }
+  
+  .main-1{
+    background-color: black;
+    color: white;
+    grid-area: main;
+  }
+  
+  /*ESTILOS VISTOS EN LA CLASE GRIDSII*/
+  @font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf');
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'poppins';
+  }
+  
+  /*header*/
+  
+  .navbar-home{
+    padding: 10px;
+    /*background-color: gray;*/
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    align-items: center;
+    /*Gradientes*/
+    /*background-image: radial-gradient(red, yellow);*/
+    background-image: linear-gradient(to left, red, yellow);
+  }
+  
+  .navbar-home .logo{
+    width: 60px;
+    height: 60px;
+    grid-column: 2/3;
+    /*transform: translate(200px,300px);*/
+    /*transform: rotate(180deg);*/
+    /*transform: scale(1,1);*/
+    /*transform: skew(10deg, 30deg);*/
+    animation-name: rotar_logo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+  }
+  
+  @keyframes rotar_logo {
+    0%{
+        transform: rotateX(0deg);
+    }
+  
+    50%{
+        transform: rotateX(180deg);
+    }
+  
+    100%{
+        transform: rotateX(360);
+    }
+    
+  }
+  
+  
+  .navbar-home .menu{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 4/7;
+  }
+  
+  .navbar-home .menu li{
+    list-style: none;
+  }
+  
+  .navbar-home .menu a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .navbar-home .menu-bar{
+    display: none;
+  }
+  
+  .navbar-home .shop{
+    grid-column: 8/9;
+  }
+  
+  /*Main*/
+  
+  .principal{
+    height: 80vh;
+    background-image: url('../assets/img/foto-alina.jpg');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8,1fr);
+  }
+  
+  .principal .contenido{
+    grid-column:7/10;
+    grid-row: 3/6;
+    color: #fff;
+  }
+  
+  .principal h3{
+    font-size: 25px;
+    font-weight:300;
+  }
+  
+  /*Animate.css*/
+  .artista-plastica{
+    animation-name: shakeX;
+    animation-duration: 5s;
+  }
+  
+  .principal h1{
+    font-size: 35px;
+    color: yellow;
+    text-transform: uppercase;
+  }
+  
+  .principal p{
+    font-weight: 200;
+    font-size: 20px;
+  }
+  
+  .principal .boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    /*Transiciones*/
+    transition: all 3s;
+  }
+  
+  .principal .boton:hover{
+    transform: translate(-10px);
+    color: black;
+  }
+  
+  
+  /*footer*/
+  .pieDepagina{
+    display: grid;
+    height: 80px;
+    align-items: center;
+    /*background-color: #808080;*/
+    color: yellow;
+    grid-template-areas: "desarrollado seguime redes-sociales";
+    background-image: linear-gradient( 135deg, #5EFCE8 10%, #736EFE 100%);
+  }
+  
+  .pieDepagina .desarrollado{
+    grid-area: desarrollado;
+    display: flex;
+    justify-content: center;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  
+  .pieDepagina .seguime{
+    grid-area: seguime;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pieDepagina .redes-sociales{
+    grid-area: redes-sociales;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+  }
+  
+  .carousel-item{
+    max-height: 650px;
+  }
+  
+  .item{
+    height: 150px;
+  }
+  
+  .imagenForm{
+    background-image: url('../assets/img/alina-muzzio-wb.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  /*Mediaqueries*/
+  @media screen and (max-width: 600px) {
+    .navbar-home{
+        position: relative;
+    }
+  
+    .navbar-home .shop{
+        display: none;
+    }
+  
+    .navbar-home .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+  
+    .navbar-home .menu{
+        display: none;
+    }
+  
+    /*main*/
+    .principal .contenido{
+        grid-column: 8/11;
+        grid-row: 3/7;
+        margin-right: 10px;
+    }
+  
+    .principal h1{
+        font-size: 25px;
+    }
+  
+    .artista-plastica{
+        animation-name: bounce;
+        animation-duration: 2s;
+    }
+  
+    .principal p{
+        font-size: 14px;
+    }
+  
+    .principal .boton{
+        font-size: 10px;
+        font-weight: 900;
+        color: yellow;
+        text-transform: uppercase;
+        background: black;
+        border: solid 1px yellow;
+    }
+  
+    /*footer*/
+  
+    .pieDepagina{
+        height: 110px;
+    }
+  
+    .pieDepagina .seguime{
+        display: none;
+    }
+  
+    .pieDepagina .desarrollado{
+        font-size: 15px;
+    }  
+  }
+  
+  /*Pseudoclases*/
+  
+  .enlace:active{
+    background: #000;
+  }
+  
+  .enlace:link{
+    color: red;
+  }
+  
+  .enlace:visited{
+    color: green;
+  }
+  
+  .enlace:hover{
+    color: gray;
+  }
+  
+  .parrafos{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+  }
+  
+  .parrafos p:first-child{
+    background-color: red;
+  }
+  
+  .parrafos p:last-child{
+    background-color: green;
+  }
+  
+  .elementos{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+  }
+  
+  .elementos p:last-of-type{
+    background-color: blue;
+  }
+  
+  .listas{
+    background-color: gray;
+    padding: 10px;
+    width: 50%;
+    margin: 25px auto;
+  }
+  
+  .listas :nth-child(even){
+    color: white;
+    background-color: blue;
+    list-style-type: none;
+  }
+  
+  
+  .listas :nth-last-child(5){
+    color: white;
+    background-color: red;
+    list-style-type: none;
+  }
+  
+  .formulario .nombre:focus{
+    border: solid 2px red;
+  }
+  
+  .formulario .email:invalid{
+    background-color: gray;
+  }
+  
+  @media (min-width:601px) and (max-width:900px){
+    .navbar-home{
+        position: relative;
+    }
+  
+    .navbar-home .shop{
+        display: none;
+    }
+  
+    .navbar-home .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+  
+    .navbar-home .menu{
+        display: none;
+    }
+  
+  }
+  
+  @media (min-width:901px) and (max-width:1024px){
+    .navbar-home{
+        position: relative;
+    }
+  
+    .navbar-home .shop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .navbar-home .menu{
+        grid-column: 4/8;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-around;
+  
+    }
+  
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
