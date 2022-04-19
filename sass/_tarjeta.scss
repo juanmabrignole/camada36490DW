@@ -44,10 +44,11 @@ $color-botones: red;
     font-family: $tipografia-card;
     
   }
-  
+  //operadores
   .tarjeta__parrafo{
     line-height: 25px;
     margin-bottom: 20px;
+    font-size: 10px + 8px;
   }
   
   /*Bloque 2*/

@@ -1,0 +1,65 @@
+//Declaracion de Variables
+$espaciado-card: 20px auto;
+$relleno-card:25px;
+$fondo-tarjeta: #F5E8C7;
+$color-title: #2E4C6D;
+
+//Funcion @extend
+.tarjeta__expo{
+    width: 50%;
+    margin: $espaciado-card;
+    padding: $relleno-card;
+    background: $fondo-tarjeta;
+    border-radius: 5px;
+}
+
+.tarjeta__img{
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta__title{
+    margin-top: 10px;
+    letter-spacing: 3px;
+    font-size: 24px;
+    color: $color-title;
+    font-weight: 500;
+    font-family: 'poppins', sans-serif;
+}
+
+.tarjeta__bajada{
+    font-size: 18px;
+    font-weight: 200;
+    font-family: 'poppins', sans-serif;
+}
+
+.tarjeta__malba{
+    @extend .tarjeta__expo;
+}
+
+.tarjeta__imgProa{
+    @extend .tarjeta__img;
+}
+
+.tarjeta__proa{
+    @extend .tarjeta__expo;
+}
+
+//Mixins con parametros
+@mixin crearBordes($color, $size, $shadow){
+    border: $size solid $color;
+    border-radius: 8px;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.tarjeta__expo{
+    @include crearBordes($fondo-tarjeta, 2px, green);
+}
+
+.tarjeta__img{
+    @include crearBordes($color-title, 2px, black);
+}
+
+
+
