@@ -1,10 +1,69 @@
-//Import
+//Modulos
 @import "colores";
 @import "tarjeta";
+@import "exposiciones";
+@import "botones";
+@import "framework";
 
 //Declaracion de Variables Globales
 $tipografia-base: arial, sans-serif;
 $size-fuentes: 25px;
+
+/*Condicionales- If*/
+$relleno: 20px;
+
+h1{
+  @if $relleno>10px {
+    color: red;
+    background-color: gray;
+    text-align: center;
+    padding: $relleno; 
+  } @else if ($relleno<10px) {
+    color: pink;
+  } @else{
+    color: brown;
+  }
+}
+
+//Ciclos- FOR
+@for $i from 1 through 6 {
+  h#{$i}
+  {
+    font-size: $i * .5em;
+  }
+  
+}
+
+//Blucle Each
+$lista-colores: red, blue, green, gray;
+
+@each $color in $lista-colores {
+  .#{$color}{
+    background-color: $color;
+  }
+  
+}
+
+//Mapas
+$encabezados:(
+  h1: 2.5em,
+  h2: 2em,
+  h3: 1em,
+  h4: .5em,
+);
+
+$h1: map-get($encabezados, h1 );
+
+h1{
+  font-size: $h1;
+}
+
+//Each con lista $encabezados
+@each $encabezado, $size in $encabezados {
+  .#{$encabezado}{
+    font-size: $size;
+  }
+}
 
 //Anidacion o nesting
 /*
@@ -127,7 +186,6 @@ nav {
   }
   
 
-  
   .padre{
     position: relative;
     top: 40px;

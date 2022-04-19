@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <!--Hojas de Estilos Css-->
@@ -12,11 +14,30 @@
     <title>Alina Muzzio- Exposiciones</title>
 </head>
 <body>
-    <header>
-        <h1 class="display-5 text-center">Alina Muzzio-Exposiciones</h1>
-    </header>
 
-    <div class="container">
+  <header>
+    <nav class="navbar-home">
+        <img class="logo" src="../assets/logo/logo.png" alt="logo-alina-muzzio">
+        <ul class="menu" >
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/sobremi.html">Sobre Mi</a></li> 
+            <li><a href="../pages/trabajos.html">Trabajos</a></li> 
+            <li><a href="../pages/exposiciones.html">Exposiciones</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>     
+        </ul>
+
+        <div class="menu-bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="shop">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </nav>
+</header>
+
+<!--Navbar Bootstrap
+   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">
@@ -51,19 +72,44 @@
         </div>
       </nav>
     </div>
+    -->
 
-    <!--Slider-->
+    <!--tarjeta con Sass-->
+      <div class="tarjeta__expo">
+        <img class="tarjeta__img" src="../assets/img/exposiciones/met.jpg" alt="">
+        <h6 class="tarjeta__title">The Metropolitan Museum of Art</h6>
+        <p class="tarjeta__bajada">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
+        <button class="tarjeta__boton btn btn-outline-danger">Visitar</button>
+      </div>
+
+       <!--tarjeta con Sass-->
+       <div class="tarjeta__proa">
+        <img class="tarjeta__imgProa" src="../assets/img/exposiciones/FundacionProa.jpg" alt="proa">
+        <h6 class="tarjeta__title">Fundacion Proa</h6>
+        <p class="tarjeta__bajada">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
+        <button class="tarjeta__boton btn btn-outline-danger">Visitar</button>
+      </div>
+
+       <!--tarjeta con Sass-->
+       <div class="tarjeta__malba">
+        <img class="tarjeta__img" src="../assets/img/exposiciones/Malba.jpg" alt="">
+        <h6 class="tarjeta__title">Museo de Arte Contemporaneo de Buenos Aires</h6>
+        <p class="tarjeta__bajada">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
+        <button class="tarjeta__boton btn btn-outline-danger">Visitar</button>
+      </div>
+
+    <!--Slider--> 
     <div class="container my-3">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../assets/img/atelier/barbara-froes-Yhsdub0hV1A-unsplash.jpg" class="d-block w-100" alt="atelier01">
+            <img src="../assets/img/atelier/atelierAlta.jpg" class="d-block w-100" alt="atelier01">
           </div>
           <div class="carousel-item">
-            <img src="../assets/img/atelier/jonathan-borba-RTHwerpZU_U-unsplash.jpg" class="d-block w-100" alt="atelier02">
+            <img src="../assets/img/atelier/atelierAlta02 (1).jpg" class="d-block w-100" alt="atelier02">
           </div>
           <div class="carousel-item">
-            <img src="../assets/img/atelier/jonathan-borba-YSMqXgvSzYA-unsplash.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/img/atelier/atelierAlta03.jpg" class="d-block w-100" alt="atelier03">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

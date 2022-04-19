@@ -1,0 +1,18 @@
+//mixins
+@mixin button {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1em;
+    background-color: blue;
+    &:hover{
+        background-color: green;
+    }
+    @media screen and(min-width: 640px) {
+        background-color: red;
+        
+    }
+}
+
+.button{
+    @include button;
+}

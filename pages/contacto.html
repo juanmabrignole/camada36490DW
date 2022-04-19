@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/c3a150fd4e.js" crossorigin="anonymous"></script>
     <!--Bootstrap-->
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <!--Hoja de Estilos CSS-->
@@ -13,7 +15,28 @@
 </head>
 <body>
 
-<!--Barra de navegacion con Bootstrap-->
+  <header>
+    <nav class="navbar-home">
+        <img class="logo" src="../assets/logo/logo.png" alt="logo-alina-muzzio">
+        <ul class="menu" >
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/sobremi.html">Sobre Mi</a></li> 
+            <li><a href="../pages/trabajos.html">Trabajos</a></li> 
+            <li><a href="../pages/exposiciones.html">Exposiciones</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>     
+        </ul>
+
+        <div class="menu-bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="shop">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </nav>
+</header>
+
+<!--Barra de navegacion con Bootstrap
     <div class="container my-3">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -49,6 +72,7 @@
             </div>
           </nav>
         </div>
+        -->
 
 
 <!--Formulario Bootstrap 5 Responsive
@@ -131,7 +155,6 @@
 
 
 <!--Formulario con Bootstraop-->
-
 <div class="container">
     <form id="backForm" action="procesar.php" method="post">
         <fieldset>
@@ -220,7 +243,8 @@
         <input class="btn btn-outline-primary my-2" type="submit" value="Enviar">
         </div>
         <div>
-        <input class="btn btn-outline-danger my-2" type="reset" value="Borrar Formulario">
+        <!--Boton Creado con Mixin Sass-->
+        <input class="button" type="reset" value="Borrar Formulario">
         </div>
         
       </fieldset>
@@ -228,8 +252,6 @@
  
 </div>
 
-
-    
     <footer id="footer">
         <p>Todos los derechos reservados</p>
     </footer>

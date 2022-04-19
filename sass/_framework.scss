@@ -1,0 +1,31 @@
+//map
+$bp: (
+    m: 640px,
+    l: 1024px,
+);
+
+//Ciclo For
+@for $i from 1 to 20 {
+    .cols-#{$i * 5}{
+        width: $i  * 5%;
+    } 
+    
+}
+
+@media screen and (min-width: map-get($bp, m)) {
+    @for $i from 1 to 20 {
+        .cols-m-#{$i * 5}{
+            width: $i  * 5%;
+        } 
+        
+    }
+}
+
+@media screen and (min-width: map-get($bp, l)) {
+    @for $i from 1 to 20 {
+        .cols-l-#{$i * 5}{
+            width: $i  * 5%;
+        } 
+        
+    }
+}
