@@ -1,10 +1,9 @@
-//Declaracion de Variables
+//DECLARACION DE VARIABLES
 $espaciado-card: 20px auto;
 $relleno-card:25px;
 $fondo-tarjeta: #F5E8C7;
 $color-title: #2E4C6D;
 
-//Funcion @extend
 .tarjeta__expo{
     width: 50%;
     margin: $espaciado-card;
@@ -34,6 +33,7 @@ $color-title: #2E4C6D;
     font-family: 'poppins', sans-serif;
 }
 
+/*FUNCION @EXTEND*/
 .tarjeta__malba{
     @extend .tarjeta__expo;
 }
@@ -46,7 +46,107 @@ $color-title: #2E4C6D;
     @extend .tarjeta__expo;
 }
 
-//Mixins con parametros
+/*CONDICIONALES IF*/
+// $relleno: 20px;
+// $color-fondo: pink;
+
+// h1{
+//   @if $color-fondo == red {
+//     color: red;
+//     background-color: gray;
+//     text-align: center;
+//     padding: $relleno; 
+//   } @else if $color-fondo == pink {
+//     color: black;
+//     background-color: pink;
+//   } @else{
+//     color: brown;
+//   }
+// }
+
+/*CICLO- FOR*/
+@for $i from 1 through 10 {
+    .col-#{$i}
+    {
+      font-size: $i * 10%;
+    }
+    
+  }
+
+/*BUCLE EACH 1*/
+$lista-colores: red, blue, green, gray;
+
+@each $color in $lista-colores {
+  .#{$color}{
+    background-color: $color;
+  }  
+}
+
+/*BUCLE EACH 2*/
+$arreglo-colores: (
+    gris1: #ccc,
+    gris2: #aeaeae,
+    gris3: #a4a4a4
+);
+
+@each $color, $valor in $arreglo-colores {
+    .fondo-#{$color}{
+        background-color: $valor;
+    }
+    
+}
+
+/*BUCLE EACH 3*/
+$redes: (
+    twitter: #55acee,
+    facebook: #3a5795,
+    send-mail: #c25e30
+
+);
+
+@each $red, $color in $redes {
+    .btn--#{$red}{
+        background-color: $color;
+    }
+    
+}
+
+/*MAPS*/
+
+$paleta: (
+    'primario': #F5E8C7,
+    'secundario': blue,
+    'success': pink
+
+);
+
+.div{
+    background-color: map-get($map: $paleta, $key: 'primario');
+    color: map-get($map: $paleta, $key: 'success' );
+}
+
+/*MAPS 2*/
+$encabezados:(
+  h1: 2.5em,
+  h2: 2em,
+  h3: 1em,
+  h4: .5em,
+);
+
+$h1: map-get($encabezados, h1 );
+
+h1{
+  font-size: $h1;
+}
+
+//EACH CON LISTA $ENCABEZADOS
+@each $encabezado, $size in $encabezados {
+  .#{$encabezado}{
+    font-size: $size;
+  }
+}
+
+//MIXINS CON PARAMETROS
 @mixin crearBordes($color, $size, $shadow){
     border: $size solid $color;
     border-radius: 8px;
@@ -61,5 +161,25 @@ $color-title: #2E4C6D;
     @include crearBordes($color-title, 2px, black);
 }
 
+/*OTRO EJEMPLO DE MIXINS*/
 
+@mixin fuente ($color-fuente, $transformacion) {
+    text-transform: $transformacion;
+    color: $color-fuente;  
+}
 
+h1{
+    font-size: 2em;
+    @include fuente(red, uppercase);
+}
+
+h2{
+    font-size: .5em;
+    @include fuente(green,lowercase);
+    
+}
+
+h3{
+    font-size: .2em;
+    @include fuente(blue, capitalize);
+}
