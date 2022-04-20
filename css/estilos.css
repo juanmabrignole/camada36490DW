@@ -94,6 +94,119 @@
   font-family: "poppins", sans-serif;
 }
 
+/*FUNCION @EXTEND*/
+/*CONDICIONALES IF*/
+/*CICLO- FOR*/
+.col-1 {
+  font-size: 10%;
+}
+
+.col-2 {
+  font-size: 20%;
+}
+
+.col-3 {
+  font-size: 30%;
+}
+
+.col-4 {
+  font-size: 40%;
+}
+
+.col-5 {
+  font-size: 50%;
+}
+
+.col-6 {
+  font-size: 60%;
+}
+
+.col-7 {
+  font-size: 70%;
+}
+
+.col-8 {
+  font-size: 80%;
+}
+
+.col-9 {
+  font-size: 90%;
+}
+
+.col-10 {
+  font-size: 100%;
+}
+
+/*BUCLE EACH 1*/
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.gray {
+  background-color: gray;
+}
+
+/*BUCLE EACH 2*/
+.fondo-gris1 {
+  background-color: #ccc;
+}
+
+.fondo-gris2 {
+  background-color: #aeaeae;
+}
+
+.fondo-gris3 {
+  background-color: #a4a4a4;
+}
+
+/*BUCLE EACH 3*/
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--send-mail {
+  background-color: #c25e30;
+}
+
+/*MAPS*/
+.div {
+  background-color: #F5E8C7;
+  color: pink;
+}
+
+/*MAPS 2*/
+h1 {
+  font-size: 2.5em;
+}
+
+.h1 {
+  font-size: 2.5em;
+}
+
+.h2 {
+  font-size: 2em;
+}
+
+.h3 {
+  font-size: 1em;
+}
+
+.h4 {
+  font-size: 0.5em;
+}
+
 .tarjeta__expo, .tarjeta__malba, .tarjeta__proa {
   border: 2px solid #F5E8C7;
   border-radius: 8px;
@@ -104,6 +217,25 @@
   border: 2px solid #2E4C6D;
   border-radius: 8px;
   box-shadow: 0px 0px 2px black;
+}
+
+/*OTRO EJEMPLO DE MIXINS*/
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: red;
+}
+
+h2 {
+  font-size: 0.5em;
+  text-transform: lowercase;
+  color: green;
+}
+
+h3 {
+  font-size: 0.2em;
+  text-transform: capitalize;
+  color: blue;
 }
 
 .button {
@@ -351,74 +483,6 @@
     width: 95%;
   }
 }
-/*Condicionales- If*/
-h1 {
-  color: red;
-  background-color: gray;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 0.5em;
-}
-
-h2 {
-  font-size: 1em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 2em;
-}
-
-h5 {
-  font-size: 2.5em;
-}
-
-h6 {
-  font-size: 3em;
-}
-
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
-}
-
-.gray {
-  background-color: gray;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-.h1 {
-  font-size: 2.5em;
-}
-
-.h2 {
-  font-size: 2em;
-}
-
-.h3 {
-  font-size: 1em;
-}
-
-.h4 {
-  font-size: 0.5em;
-}
-
 /*
 nav {
     background-color: $color-fondo;
