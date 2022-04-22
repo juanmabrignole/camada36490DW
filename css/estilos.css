@@ -51,12 +51,15 @@
   text-decoration: none;
 }
 .boton:hover {
-  background-color: red;
+  background-color: transparent;
 }
 
+
 .boton__texto {
+  padding: 12px;
   color: #fff;
   font-size: 18px;
+  border-radius: 10px;
 }
 
 /*Modificador BEM*/
@@ -94,8 +97,6 @@
   font-family: "poppins", sans-serif;
 }
 
-/*FUNCION @EXTEND*/
-/*CONDICIONALES IF*/
 /*CICLO- FOR*/
 .col-1 {
   font-size: 10%;

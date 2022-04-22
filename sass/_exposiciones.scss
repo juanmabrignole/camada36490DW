@@ -33,7 +33,7 @@ $color-title: #2E4C6D;
     font-family: 'poppins', sans-serif;
 }
 
-/*FUNCION @EXTEND*/
+//FUNCION @EXTEND
 .tarjeta__malba{
     @extend .tarjeta__expo;
 }
@@ -46,7 +46,7 @@ $color-title: #2E4C6D;
     @extend .tarjeta__expo;
 }
 
-/*CONDICIONALES IF*/
+//CONDICIONALES IF
 // $relleno: 20px;
 // $color-fondo: pink;
 
